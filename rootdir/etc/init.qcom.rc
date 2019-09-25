@@ -66,8 +66,8 @@ on post-fs-data
     mkdir /mnt/vendor/persist/fingerprint/silead 0770 system system
     mkdir /data/vendor/egis   0770 system system
 
-service charger /charger
+service charger /system/bin/charger
     override
     class charger
     group system graphics
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
